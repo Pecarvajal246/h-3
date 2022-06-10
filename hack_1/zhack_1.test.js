@@ -4,11 +4,11 @@ let resultWhile = require("./hack_1_while");
 
 describe("===== HACK-1 =====",()=>{
   it("Validar for",()=>{
-    expect(resultFor).toEqual([{a:1},{b:2},{c:3},{d:4},{e:5}]);
+    expect(resultFor).toEqual([1,2,3,4,5]);
   });
 
   it("Validar while",()=>{
-    expect(resultWhile).toEqual([{a:1},{b:2},{c:3},{d:4},{e:5}]);
+    expect(resultWhile).toEqual([1,2,3,4,5]);
   });
 });
 

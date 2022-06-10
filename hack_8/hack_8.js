@@ -14,6 +14,9 @@ let foo = {
 };
 let result = [];
 
+for (let key in foo) {
+    result.push([key, foo[key]]);
+}
 
 //export result
 module.exports = result; 

@@ -12,6 +12,7 @@ let foo = {
 };
 let result;
 
+result = foo.skills
 
 //export result
 module.exports = result; 

@@ -11,6 +11,9 @@ let tokenF = {f:6};
 let tokenG = {g:7};
 let result = [];
  
+result.push(tokenG);
+result.push(...arr);
+result.push(tokenF);
  
 //export result
 module.exports = result; 

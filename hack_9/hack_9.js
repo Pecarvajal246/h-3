@@ -23,6 +23,7 @@ let bar = {
 }
 let result;
 
+result = {...foo, ...bar};
 
 //export result
 module.exports = result; 

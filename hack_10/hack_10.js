@@ -17,18 +17,43 @@
 }
 */
 let foo = {
-    id:100,
-    name:"foo",
-    roles:["admin"],
-    skills:["javascript","html","css","python","flask","react","redux"],
-    alias:"super alias"
+  id: 100,
+  name: "foo",
+  roles: ["admin"],
+  skills: ["javascript", "html", "css", "python", "flask", "react", "redux"],
+  alias: "super alias",
 };
 let roleSuperUser = "SUPER_USER";
 let roleUser = "USER";
-let skills = ["git","github","docker","deploy"];
-let levels = [{LEVEL:"l-1"},{LEVEL:"l-2"},{LEVEL:"l-3"}];
+let skills = ["git", "github", "docker", "deploy"];
+let levels = [{ LEVEL: "l-1" }, { LEVEL: "l-2" }, { LEVEL: "l-3" }];
 let result;
 
+function capitalize(word) {
+  word = word[0].toUpperCase() + word.slice(1);
+  return word;
+}
+
+foo.name = capitalize(foo.name);
+foo.roles = [foo.roles[0].toUpperCase()];
+foo.roles = foo.roles.concat(roleSuperUser, roleUser);
+foo.skills[1] = foo.skills[1].toUpperCase();
+foo.skills[2] = foo.skills[2].toUpperCase();
+foo.skills = foo.skills.map(capitalize);
+skills = skills.map(capitalize);
+foo.skills.unshift(skills[1]);
+foo.skills.unshift(skills[0]);
+foo.skills.push(skills[3]);
+foo.skills.splice(5, 0, skills[2]);
+
+levels = levels.map((item) => {
+  item.LEVEL = item.LEVEL.replace("l-", "L");
+  return item;
+});
+
+foo.levels = levels;
+delete foo.alias;
+result = { ...foo };
 
 //export result
-module.exports = result; 
+module.exports = result;

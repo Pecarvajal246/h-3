@@ -14,6 +14,7 @@ let result = {
 };
 let role = "admin";
 
+result.role = role;
  
 //export result
 module.exports = result; 
