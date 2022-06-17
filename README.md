@@ -5,4 +5,5 @@
 
 |Integrante | Repo | 
 |----------|---------|
-|Aylen  🇦🇷  | https://github.com/Ayla404/h-3indv |
+|Aylen  🇦🇷  | https://github.com/Ayla404/h-3indv|
+|Federico  🇦🇷 | https://github.com/federico98/h-3|
